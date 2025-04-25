@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet"href="web.css">
+    </head>
+    <body>
+    <button onclick="reduceText()">Attack</button>
+    <div id="display">100</div>
+    <script>
+        let count = 100;
+
+        function reduceText() {
+            if (count > 0) {
+                count -= 10;
+                document.getElementById('display').innerText = count;
+            }
+            if (count === 0) {
+                document.getElementById('display').innerText = 'Game Over';
+            }
+        }
+    </script>
+</body>
+</html>
+body
+ {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: green;
+}
+button
+ {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: brown;
+}
+#display 
+{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
